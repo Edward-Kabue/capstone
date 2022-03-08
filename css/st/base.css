@@ -1,0 +1,14 @@
+@font-face {
+  font-family: CocogooseLetterPress;
+  src: url("../assets/fonts/cocogoose_letterpress/COCOGOOSELETTERPRESS-TRIAL.ttf");
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url("../assets/fonts/cocogoose/Cocogoose_trial.ttf");
+}
+
+.unscrollable {
+  height: 100%;
+  overflow: hidden;
+}

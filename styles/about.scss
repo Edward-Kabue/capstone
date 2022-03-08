@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @import "header";
 
 html {
@@ -8,7 +9,8 @@ body {
   background: $home-main-bg;
   width: 100vw;
   margin: 0;
-  overflow-x: unset;
+  overflow-x: hidden;
+  overflow-y: unset;
 }
 
 main {
@@ -33,7 +35,8 @@ section .separator {
   padding-top: 4rem;
   padding-bottom: 3em;
   padding-inline: 5%;
-  background-image: url("../assets/svg/1480796300.svg"),
+  background-image:
+    url("../assets/svg/1480796300.svg"),
     url("../assets/svg/piano-illustration.svg"),
     url("../assets/svg/Drums-Silhouette-2.svg"),
     url("../assets/svg/Geometric-Heart-4.svg");
@@ -206,11 +209,12 @@ section .separator {
   @include flex-column(center, 1em);
 
   background: rgb(83, 71, 71);
-  background: linear-gradient(
-    90deg,
-    rgba(83, 71, 71, 1) 0%,
-    rgb(122, 114, 106) 78%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(83, 71, 71, 1) 0%,
+      rgb(122, 114, 106) 78%
+    );
   color: #fcfcfc;
   padding-inline: 1em;
   padding-bottom: 1em;
@@ -261,7 +265,8 @@ section .separator {
     padding-top: 4rem;
     padding-bottom: 3em;
     border-bottom: 1px solid gray;
-    background-image: url("../assets/svg/1480796300.svg"),
+    background-image:
+      url("../assets/svg/1480796300.svg"),
       url("../assets/svg/piano-illustration.svg"),
       url("../assets/svg/Drums-Silhouette-2.svg"),
       url("../assets/svg/Geometric-Heart-4.svg");
@@ -434,11 +439,12 @@ section .separator {
     @include flex-column(center, 1em);
 
     background: rgb(83, 71, 71);
-    background: linear-gradient(
-      90deg,
-      rgba(83, 71, 71, 1) 0%,
-      rgb(122, 114, 106) 78%
-    );
+    background:
+      linear-gradient(
+        90deg,
+        rgba(83, 71, 71, 1) 0%,
+        rgb(122, 114, 106) 78%
+      );
     color: #fcfcfc;
     padding-inline: 2em;
     padding-bottom: 1em;
