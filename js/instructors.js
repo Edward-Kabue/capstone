@@ -3,50 +3,50 @@ const instructorsContainer = document.querySelector(".instructors-container");
 const instructors = [
   {
     id: 1,
-    name: "Azerty Uiop",
-    title: "Lead at London Philarmonic",
+    name: "Abhishek Muk",
+    title: "Product Lead",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusamus",
-    image: "images/instructors/instructor1.jpg",
+    image: "css/assets/jpg/abhishekmuk.jpeg",
   },
   {
     id: 2,
-    name: "Qwertz Danablu",
-    title: '"The Saxophon King"',
+    name: "Anaand esdelvalle",
+    title: "Software Engineer",
     description:
       "Dolores vero facilis odio animi error necessitatibus, soluta odit dicta.",
-    image: "images/instructors/instructor2.jpg",
+    image: "css/assets/jpg/anaandresdelvalle.jpeg",
   },
   {
     id: 3,
-    name: "Jane Doe",
-    title: '"Mrs. Violin"',
+    name: "Evelyn watts",
+    title: "Creative Lead",
     description:
       "Tenetur deleniti illum maxime consequuntur quam, eius, ducimus voluptate!",
-    image: "images/instructors/instructor3.jpg",
+    image: "css/assets/jpg/evelynwatts.jpeg",
   },
   {
     id: 4,
-    name: "Guillermo Whatever",
-    title: '"Guitar Hero"',
+    name: "David wacht ",
+    title: "Product Manager",
     description: "Earum veritatis iure vitae ullam saepe soluta sint natus non",
-    image: "images/instructors/instructor4.jpg",
+    image: "css/assets/jpg/davidwachtendonk.jpeg",
   },
   {
     id: 5,
-    name: "Hans Somename",
-    title: '"Piano Master"',
+    name: "caroline Hynes",
+    title: "Software Engineer",
     description:
       "Est perspiciatis perferendis impedit quo. Libero, iusto. Eveniet, ipsa",
-    image: "images/instructors/instructor5.jpg",
+    image: "css/assets/jpg/carolinehynes.jpeg",
   },
   {
     id: 6,
-    name: "Eve Anonymous",
-    title: '"The Angel\'s Voice"',
+    name: "charles li",
+    title: "Software Engineer",
     description:
       "Recusandae officiis odit voluptates, aliquam, alias ipsam aperiam quas",
-    image: "images/instructors/instructor6.jpg",
+    image: "css/assets/jpg/charlesli.jpeg",
   },
 ];
 

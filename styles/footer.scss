@@ -85,15 +85,12 @@ footer {
       color: $primary-2;
     }
 
-    .footer-image {
+    .footer-logo a {
       @include flex-row(flex-end, 0);
-
+      text-decoration: none;
+      font-family: Pacifico, Helvetica, sans-serif;
+      color: #f45011;
       max-width: 40%;
-
-      img {
-        width: 60%;
-        height: auto;
-      }
     }
 
     .footer-rest {

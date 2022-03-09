@@ -95,16 +95,15 @@ footer.dark .footer-icons a {
   footer a {
     color: #ec5242;
   }
-  footer .footer-image {
+  footer .footer-logo a {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 0;
+    text-decoration: none;
+    font-family: Pacifico, Helvetica, sans-serif;
+    color: #f45011;
     max-width: 40%;
-  }
-  footer .footer-image img {
-    width: 60%;
-    height: auto;
   }
   footer .footer-rest {
     display: flex;

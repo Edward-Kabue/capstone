@@ -261,12 +261,6 @@ section .separator {
     img {
       width: 30%;
       height: auto;
-      filter: grayscale(95%);
-
-      &:last-child,
-      &:first-child {
-        filter: grayscale(70%);
-      }
     }
   }
 }
@@ -462,16 +456,16 @@ section .separator {
   .partners {
     @include flex-column(center, 1em);
 
-    // background: rgb(83, 71, 71);
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(83, 71, 71, 1) 0%,
-    //   rgb(122, 114, 106) 78%
-    // );
-    // color: #fcfcfc;
-    // padding-inline: 2em;
-    // padding-bottom: 1em;
-    // margin-bottom: 2em;
+    background: rgb(83, 71, 71);
+    background: linear-gradient(
+      90deg,
+      rgba(83, 71, 71, 1) 0%,
+      rgb(122, 114, 106) 78%
+    );
+    color: #fcfcfc;
+    padding-inline: 2em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
 
     .section-title {
       @include font-size-color($font-3, 25px, white);
@@ -488,8 +482,8 @@ section .separator {
       flex-wrap: nowrap;
 
       img {
+        width: 15%;
         height: auto;
-        width: 10%;
       }
     }
   }

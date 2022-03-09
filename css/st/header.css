@@ -226,8 +226,8 @@ header {
     padding: 10px;
     top: 0;
     left: 0;
+    right: 0;
     padding-right: 10%;
-    width: 100vw;
     background: #3e3e3e;
     color: #ddd;
   }
@@ -256,6 +256,13 @@ header {
     color: #f45011;
   }
 
+  #btn {
+    border: 5px solid #ec5242;
+    margin-top: -12px;
+    padding: 9px;
+    font-size: 16px;
+  }
+
   .header-desktop .menu ul {
     display: flex;
     flex-direction: row;
@@ -276,7 +283,6 @@ header {
     color: #ec5242;
     cursor: pointer;
   }
-
   .header-desktop .menu ul .link a.active {
     color: #ec5242;
   }
