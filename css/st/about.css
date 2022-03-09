@@ -1,12 +1,7 @@
-/* stylelint-disable */
+/* stylelint-disable no-descending-specificity */
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.cdnfonts.com/css/cocogoose");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
-.unscrollable {
-  height: 100%;
-  overflow: hidden;
-}
 
 .header-mobile,
 .header-desktop {
@@ -860,6 +855,11 @@ section .separator {
     width: 15%;
     height: auto;
   }
+}
+
+.unscrollable {
+  height: 100%;
+  overflow: hidden;
 }
 
 footer {
