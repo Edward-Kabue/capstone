@@ -7,15 +7,18 @@ $home-main-bg: #f8f8f8;
 $about-main-bg: #f7f7f7;
 $program-item-bg: #3c3f46;
 
-@font-face {
-  font-family: CocogooseLetterPress;
-  src: url("../assets/fonts/cocogoose_letterpress/COCOGOOSELETTERPRESS-TRIAL.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.cdnfonts.com/css/cocogoose");
 
-@font-face {
-  font-family: Cocogoose;
-  src: url("../assets/fonts/cocogoose/Cocogoose_trial.ttf");
-}
+// @font-face {
+//   font-family: CocogooseLetterPress;
+//   src: url("../assets/fonts/cocogoose_letterpress/COCOGOOSELETTERPRESS-TRIAL.ttf");
+// }
+
+// @font-face {
+//   font-family: Cocogoose;
+//   src: url("../assets/fonts/cocogoose/Cocogoose_trial.ttf");
+// }
 
 @mixin font-size-color($ff, $size, $color) {
   font-family: $ff;

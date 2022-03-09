@@ -1,12 +1,22 @@
 /* stylelint-disable no-descending-specificity */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.cdnfonts.com/css/cocogoose");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.cdnfonts.com/css/cocogoose");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.cdnfonts.com/css/cocogoose");
+.unscrollable {
+  height: 100%;
+  overflow: hidden;
+}
 
 .header-mobile,
 .header-desktop {
-  width: 100vw;
+  width: 100%;
   padding: 25px;
   padding-left: 40px;
   margin: 0;
-  overflow-y: hidden;
 }
 
 header {
@@ -24,14 +34,12 @@ header {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
-  background-image: url("../assets/jpg/kyle-smith-music-camp.jpg");
+  background-image: url("../assets/png/bg.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 0 0;
   background-size: cover;
-  opacity: 0.12;
-  background-color: #d3d3d3;
+  opacity: 0.9;
 }
 
 .header-mobile {
@@ -103,59 +111,49 @@ header {
     left: -60%;
     top: -200px;
   }
-
   25% {
     left: -40%;
     top: -180px;
   }
-
   50% {
     left: -25%;
     top: -140px;
   }
-
   75% {
     left: -10%;
     top: -70px;
   }
-
   100% {
     left: 0%;
     top: 0;
   }
 }
-
 @keyframes mobile-menu-animation-hide {
   0% {
     opacity: 1;
     left: 0%;
     top: 0;
   }
-
   25% {
     opacity: 0.75;
     left: 30%;
     top: -70px;
   }
-
   50% {
     opacity: 0.5;
     left: 60%;
     top: -140px;
   }
-
   75% {
     opacity: 0.25;
     left: 90%;
     top: -180px;
   }
-
   99% {
     opacity: 0;
     display: none;
   }
 }
-
 .mobile-menu {
   display: none;
 }
@@ -219,13 +217,9 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    box-shadow: 0 2px 2px 2px grey;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    padding: 20px 20px 5px 20px;
-    right: 0;
-    left: 0;
-    position: relative;
+    box-shadow: 0 2px 2px 2px gray;
+    padding-bottom: 5px;
+    width: 100vw;
   }
 
   .header-desktop .topbar {
@@ -236,8 +230,9 @@ header {
     position: absolute;
     padding: 10px;
     top: 0;
+    left: 0;
     padding-right: 10%;
-    width: 100%;
+    width: 100vw;
     background: #3e3e3e;
     color: #ddd;
   }
@@ -260,44 +255,82 @@ header {
     width: 10%;
   }
 
-  .header-desktop .menu .logo img {
-    position: relative;
-    top: 25%;
-    width: auto;
-    height: 60px;
+  .header-desktop .menu .logo a {
+    text-decoration: none;
+    font-family: Pacifico, Helvetica, sans-serif;
+    color: #f45011;
   }
 
   .header-desktop .menu ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5vw;
+    gap: 3vw;
+    margin-left: 30vw;
     margin-top: 35px;
   }
 
   .header-desktop .menu ul .link a {
-    font-family: "Lato", sans-serif;
-    font-size: 18px;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
     color: #272a31;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
+  }
+  .header-desktop .menu ul .link a:hover {
+    color: #ec5242;
+    cursor: pointer;
   }
 
   .header-desktop .menu ul .link a.active {
     color: #ec5242;
   }
 }
-
-@font-face {
-  font-family: CocogooseLetterPress;
-  src: url("../assets/fonts/cocogoose_letterpress/COCOGOOSELETTERPRESS-TRIAL.ttf");
+.spinner {
+  margin: 10px auto;
+  width: 70px;
+  text-align: center;
+  display: none;
 }
 
-@font-face {
-  font-family: Cocogoose;
-  src: url("../assets/fonts/cocogoose/Cocogoose_trial.ttf");
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #ec5242;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .unscrollable {
   height: 100%;
   overflow: hidden;
@@ -321,43 +354,30 @@ main {
   align-items: flex-start;
   gap: 1em;
   position: relative;
-  margin-top: -2rem;
   padding-top: 5rem;
   padding-bottom: 3em;
   padding-left: 5%;
-  background-image:
-    url("../assets/svg/1480796300.svg"),
-    url("../assets/svg/piano-illustration.svg"),
-    url("../assets/svg/Drums-Silhouette-2.svg"),
-    url("../assets/svg/acoustic_guitar.svg"),
-    url("../assets/svg/Geometric-Heart-4.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-attachment: scroll, scroll, scroll, scroll, scroll;
-  background-position: 30% 60%, 84% 15%, 23% 12%, 93% 48%, 92% 95%;
-  background-size: 100px, 50px, 50px, 40px, 100px;
 }
-
 .main-info .pre-title {
   font-family: "Lato", sans-serif;
   font-size: 1.2em;
   color: #ec5242;
+  z-index: 120;
   margin-top: 3em;
   font-weight: 300;
 }
-
 .main-info .title {
   font-family: "CocogooseLetterPress", sans-serif;
   font-size: 2em;
   color: #ec5242;
+  z-index: 120;
   margin-top: -1em;
 }
-
 .main-info .title .year {
   font-family: "Cocogoose", sans-serif;
   font-size: 1em;
   color: #ec5242;
 }
-
 .main-info .post-title {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -370,7 +390,6 @@ main {
   opacity: 0.9;
   z-index: 80;
 }
-
 .main-info .dates {
   font-family: "Cocogoose", sans-serif;
   font-size: 1em;
@@ -381,7 +400,6 @@ main {
   transform: scale(1.4);
   margin-left: 20%;
 }
-
 .main-info .venue {
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -391,7 +409,6 @@ main {
   margin-left: 10px;
   z-index: 1000;
 }
-
 .main-info .venue:hover {
   cursor: pointer;
   color: #ec5242;
@@ -411,34 +428,19 @@ section .separator {
   align-items: center;
   gap: 1em;
   position: relative;
-  background-image: url("../assets/jpg/dark-gray-sand.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  color: #f8f8f8;
-  padding-block: 1.2em;
+  background-color: #282a34;
 }
-
-.main-program .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #ce90ce;
-}
-
 .main-program .section-title {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   color: white;
 }
-
 .main-program .articles-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-
 .main-program .program-item {
   display: flex;
   flex-direction: row;
@@ -452,11 +454,9 @@ section .separator {
   border: 2px solid #3c3f46;
   opacity: 0.9;
 }
-
 .main-program .program-item .icon {
   font-size: 1.7em;
 }
-
 .main-program .program-item .activity {
   color: #ec5242;
   font-size: 18px;
@@ -464,17 +464,14 @@ section .separator {
   font-weight: bold;
   z-index: 100;
 }
-
 .main-program .program-item .description {
   color: #fff;
   font-size: 16px;
   text-align: left;
 }
-
 .main-program .see-program {
   display: none;
 }
-
 .main-program .enroll-btn {
   display: block;
   cursor: pointer;
@@ -487,6 +484,7 @@ section .separator {
   margin-block: 1.3em 0.8em;
   border: 1px solid #272a31;
   font-weight: 400;
+  z-index: 1200;
 }
 
 .instructors {
@@ -498,28 +496,24 @@ section .separator {
   background-color: #f8f8f8;
   padding-bottom: 1em;
 }
-
 .instructors .section-title {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   color: #272a31;
   margin-top: 2em;
 }
-
 .instructors .instructors-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
 }
-
 .instructors .instructor {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
 }
-
 .instructors .instructor .img-container {
   display: flex;
   flex-direction: row;
@@ -527,12 +521,10 @@ section .separator {
   gap: 0;
   padding-left: 5%;
 }
-
 .instructors .instructor img {
   width: 200px;
   height: auto;
 }
-
 .instructors .instructor .instructor-text {
   display: flex;
   flex-direction: column;
@@ -541,20 +533,17 @@ section .separator {
   justify-content: flex-start;
   font-family: "Lato", sans-serif;
 }
-
 .instructors .instructor .instructor-text .separator {
   background-color: #d3d3d3;
   align-self: flex-start;
   margin-bottom: 10px;
   width: 25%;
 }
-
 .instructors .instructor .instructor-text .instructor-name {
   color: #272a31;
   font-size: 20px;
   font-weight: 700;
 }
-
 .instructors .instructor .instructor-text .instructor-title {
   color: #ec5242;
   font-style: italic;
@@ -562,14 +551,12 @@ section .separator {
   font-size: 16px;
   margin-top: -4%;
 }
-
 .instructors .instructor .instructor-text .instructor-description {
   color: #272a31;
   font-size: 14px;
   font-weight: 200;
   margin-top: -2%;
 }
-
 .instructors .show-more {
   display: flex;
   flex-direction: row;
@@ -585,7 +572,6 @@ section .separator {
   background: #fff;
   padding-block: 15px;
 }
-
 .instructors .show-more span {
   color: #ec5242;
   margin-left: 15px;
@@ -603,14 +589,12 @@ section .separator {
   padding-bottom: 1em;
   margin-bottom: 2em;
 }
-
 .partners .section-title {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   color: white;
   margin-bottom: 8px;
 }
-
 .partners .partners-container {
   display: flex;
   flex-direction: row;
@@ -618,21 +602,15 @@ section .separator {
   gap: 1%;
   flex-wrap: wrap;
 }
-
 .partners .partners-container img {
   width: 30%;
   height: auto;
   filter: grayscale(95%);
 }
-
-.partners .partners-container img:last-child,
-.partners .partners-container img:first-child {
+.partners .partners-container img:last-child, .partners .partners-container img:first-child {
   filter: grayscale(70%);
 }
 
-/* ------------------------------------------
-  Media Query
--------------------------------------------- */
 @media only screen and (min-width: 768px) {
   .enroll-btn {
     display: none;
@@ -643,7 +621,6 @@ section .separator {
     margin-block: 1.5em;
     z-index: 10000;
   }
-
   .see-program a {
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -651,7 +628,6 @@ section .separator {
     font-weight: bold;
     cursor: pointer;
   }
-
   .see-program a:hover {
     color: #ec5242;
   }
@@ -662,29 +638,11 @@ section .separator {
     align-items: flex-start;
     gap: 1em;
     position: relative;
-    margin-top: -2rem;
+    margin-top: 2rem;
     padding-top: 5rem;
     padding-bottom: 3em;
     padding-left: 15%;
-    background-image:
-      url("../assets/svg/1480796300.svg"),
-      url("../assets/svg/piano-illustration.svg"),
-      url("../assets/svg/Drums-Silhouette-2.svg"),
-      url("../assets/svg/acoustic_guitar.svg"),
-      url("../assets/svg/Geometric-Heart-4.svg"),
-      url("../assets/svg/Anonymous_funny_music_note.svg");
-    background-repeat:
-      no-repeat,
-      no-repeat,
-      no-repeat,
-      no-repeat,
-      no-repeat,
-      no-repeat;
-    background-attachment: scroll, scroll, scroll, scroll, scroll, scroll;
-    background-position: 30% 65%, 60% 15%, 45% 10%, 60% 48%, 65% 95%, 90% 50%;
-    background-size: 100px, 50px, 50px, 40px, 100px, 150px;
   }
-
   .main-info .pre-title {
     font-family: "Lato", sans-serif;
     font-size: 2.5em;
@@ -692,21 +650,19 @@ section .separator {
     margin-top: 0;
     font-weight: 300;
   }
-
   .main-info .title {
-    font-family: "CocogooseLetterPress", sans-serif;
-    font-size: 3em;
-    color: #ec5242;
-    width: 80%;
-    margin-top: -1em;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#ec5242, #df4321);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 12000;
+    width: 70%;
   }
-
   .main-info .title .year {
     font-family: "Cocogoose", sans-serif;
     font-size: 1em;
     color: #ec5242;
   }
-
   .main-info .post-title {
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -715,11 +671,10 @@ section .separator {
     padding: 10px 15px;
     background-color: #f7f7f7;
     max-width: 70%;
-    margin: 1% 2% 0 0;
+    margin: 20px 2% 0 0;
     opacity: 0.9;
     z-index: 20000;
   }
-
   .main-info .dates {
     font-family: "Cocogoose", sans-serif;
     font-size: 1.5em;
@@ -730,7 +685,6 @@ section .separator {
     transform: scale(1.4);
     margin-left: 18%;
   }
-
   .main-info .venue {
     font-family: "Lato", sans-serif;
     font-size: 1em;
@@ -748,7 +702,6 @@ section .separator {
     font-size: 25px;
     color: white;
   }
-
   .main-program .articles-container {
     display: flex;
     flex-direction: row;
@@ -756,7 +709,6 @@ section .separator {
     gap: 1px;
     margin-inline: 3em;
   }
-
   .main-program .program-item {
     display: flex;
     flex-direction: column;
@@ -770,11 +722,9 @@ section .separator {
     height: 200px;
     z-index: 1000;
   }
-
   .main-program .program-item .icon {
     font-size: 1.8em;
   }
-
   .main-program .program-item .activity {
     color: #ec5242;
     font-size: 18px;
@@ -782,13 +732,11 @@ section .separator {
     font-weight: bold;
     z-index: 100;
   }
-
   .main-program .program-item .description {
     color: #fff;
     font-size: 14px;
     text-align: center;
   }
-
   .main-program .program-item:hover {
     border: 5px solid #f8f8f8;
   }
@@ -796,14 +744,12 @@ section .separator {
   .instructors {
     margin-bottom: 2em;
   }
-
   .instructors .section-title {
     font-family: "Lato", sans-serif;
     font-size: 25px;
     color: #272a31;
     margin-top: 2em;
   }
-
   .instructors .instructors-container {
     display: flex;
     flex-direction: row;
@@ -812,7 +758,6 @@ section .separator {
     gap: 10%;
     margin-top: 1em;
   }
-
   .instructors .instructors-container .instructor {
     width: 35%;
     margin: 20px;
@@ -821,36 +766,29 @@ section .separator {
     justify-content: center;
     gap: 0;
   }
-
   .instructors .instructors-container .instructor .img-container {
     padding-left: 0;
   }
-
   .instructors .instructors-container .instructor .img-container img {
     width: 270px;
     height: auto;
   }
-
   .instructors .instructors-container .instructor .instructor-text {
     margin-left: 20px;
     margin-top: -10px;
   }
-
   .instructors .instructors-container .instructor .instructor-text .separator {
     background-color: #d3d3d3;
     align-self: flex-start;
     margin-bottom: 10px;
     width: 25%;
   }
-
   .instructors .instructors-container .instructor .instructor-text .instructor-name {
     font-size: 22px;
   }
-
   .instructors .instructors-container .instructor .instructor-text .instructor-title {
     font-size: 17px;
   }
-
   .instructors .instructors-container .instructor .instructor-text .instructor-description {
     font-size: 14px;
   }
@@ -860,24 +798,15 @@ section .separator {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    background: #534747;
-    background: linear-gradient(90deg, #534747 0%, #7a726a 78%);
-    color: #fcfcfc;
-    padding-inline: 2em;
-    padding-bottom: 1em;
-    margin-bottom: 2em;
   }
-
   .partners .section-title {
     font-family: "Lato", sans-serif;
     font-size: 25px;
     color: white;
   }
-
   .partners .separator {
     margin-top: 5px;
   }
-
   .partners .partners-container {
     display: flex;
     flex-direction: row;
@@ -886,17 +815,14 @@ section .separator {
     margin-block: 0.5em;
     flex-wrap: nowrap;
   }
-
   .partners .partners-container img {
-    width: 15%;
     height: auto;
-    filter: grayscale(95%);
+    width: 10%;
   }
-
-  .partners .partners-container img:last-child,
-  .partners .partners-container img:first-child {
-    filter: grayscale(70%);
-  }
+}
+.unscrollable {
+  height: 100%;
+  overflow: hidden;
 }
 
 footer {
@@ -906,11 +832,9 @@ footer {
   gap: 5%;
   padding-block: 3em;
 }
-
 footer a {
   color: #ec5242;
 }
-
 footer .footer-image {
   display: flex;
   flex-direction: row;
@@ -918,12 +842,10 @@ footer .footer-image {
   gap: 0;
   width: 45%;
 }
-
 footer .footer-image img {
   width: 70%;
   height: auto;
 }
-
 footer .footer-rest {
   display: flex;
   flex-direction: column;
@@ -931,7 +853,6 @@ footer .footer-rest {
   gap: 12px;
   padding-left: 10px;
 }
-
 footer .footer-rest .footer-text {
   display: flex;
   flex-direction: column;
@@ -941,18 +862,15 @@ footer .footer-rest .footer-text {
   font-size: 12px;
   color: #272a31;
 }
-
 footer .footer-rest .footer-text .heart {
   color: red;
 }
-
 footer .footer-rest .footer-text p {
   margin-block: 5px;
   font-size: 14px;
   color: #272a31;
   font-weight: 400;
 }
-
 footer .footer-rest .footer-icons {
   display: flex;
   flex-direction: row;
@@ -960,32 +878,26 @@ footer .footer-rest .footer-icons {
   gap: 15px;
   font-size: 20px;
 }
-
 footer .footer-rest .footer-icons a {
   font-family: "CocogooseLetterPress", sans-serif;
   font-size: 25px;
   color: #272a31;
   padding: 10px;
 }
-
 footer .footer-rest .footer-email {
   margin-top: -30px;
 }
-
 footer .footer-rest .footer-email a {
   font-family: "Cocogoose", sans-serif;
   font-size: 14px;
   color: #272a31;
 }
-
 footer.dark {
   background: #2e2e2e;
 }
-
 footer.dark .footer-image img {
   filter: invert(0.85);
 }
-
 footer.dark .footer-text p,
 footer.dark .footer-email a,
 footer.dark .footer-icons a {
@@ -1000,11 +912,9 @@ footer.dark .footer-icons a {
     gap: 5%;
     padding-bottom: 1em;
   }
-
   footer a {
     color: #ec5242;
   }
-
   footer .footer-image {
     display: flex;
     flex-direction: row;
@@ -1012,12 +922,10 @@ footer.dark .footer-icons a {
     gap: 0;
     max-width: 40%;
   }
-
   footer .footer-image img {
     width: 60%;
     height: auto;
   }
-
   footer .footer-rest {
     display: flex;
     flex-direction: column;
@@ -1025,7 +933,6 @@ footer.dark .footer-icons a {
     gap: 20px;
     padding-left: 10px;
   }
-
   footer .footer-rest .footer-text {
     display: flex;
     flex-direction: column;
@@ -1035,18 +942,15 @@ footer.dark .footer-icons a {
     font-size: 12px;
     color: #272a31;
   }
-
   footer .footer-rest .footer-text .heart {
     color: red;
   }
-
   footer .footer-rest .footer-text p {
     margin-block: 5px;
     font-size: 18px;
     color: #272a31;
     font-weight: 400;
   }
-
   footer .footer-rest .footer-icons {
     display: flex;
     flex-direction: row;
@@ -1054,35 +958,29 @@ footer.dark .footer-icons a {
     gap: 15px;
     font-size: 20px;
   }
-
   footer .footer-rest .footer-icons a {
     font-family: "CocogooseLetterPress", sans-serif;
     font-size: 25px;
     color: #272a31;
     padding: 10px;
   }
-
   footer .footer-rest .footer-email {
     margin-top: -30px;
   }
-
   footer .footer-rest .footer-email a {
     font-family: "Cocogoose", sans-serif;
     font-size: 14px;
     color: #272a31;
   }
-
   footer.dark {
     background: #2e2e2e;
   }
-
   footer.dark .footer-image img {
     filter: invert(0.85);
   }
-
   footer.dark .footer-text p,
-  footer.dark .footer-email a,
-  footer.dark .footer-icons a {
+footer.dark .footer-email a,
+footer.dark .footer-icons a {
     color: #ccc;
   }
-}
+}/*# sourceMappingURL=main.css.map */

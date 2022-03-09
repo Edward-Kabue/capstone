@@ -1,14 +1,6 @@
-@font-face {
-  font-family: CocogooseLetterPress;
-  src: url("../assets/fonts/cocogoose_letterpress/COCOGOOSELETTERPRESS-TRIAL.ttf");
-}
-
-@font-face {
-  font-family: Cocogoose;
-  src: url("../assets/fonts/cocogoose/Cocogoose_trial.ttf");
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.cdnfonts.com/css/cocogoose");
 .unscrollable {
   height: 100%;
   overflow: hidden;
-}
+}/*# sourceMappingURL=base.css.map */
