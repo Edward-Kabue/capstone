@@ -37,15 +37,13 @@ section .separator {
   padding-inline: 5%;
 
   .pre-title {
-    @include font-size-color($font-3, 1.7em, $primary-2);
-
+    @include font-size-color($font-3, 1.9em, $primary-2);
     margin-top: 1em;
     font-weight: 300;
   }
 
   .title {
     @include font-size-color($font-2, 1.9em, $primary-2);
-
     width: 100%;
     margin-left: 11%;
 

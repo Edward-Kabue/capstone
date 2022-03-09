@@ -23,7 +23,7 @@ main {
   padding-left: 5%;
 
   .pre-title {
-    @include font-size-color($font-3, 1.2em, $primary-2);
+    @include font-size-color($font-3, 1.9em, $primary-2);
     z-index: 120;
     margin-top: 3em;
     font-weight: 300;
@@ -290,7 +290,6 @@ section .separator {
   .main-info {
     @include flex-column(flex-start, 1em);
     position: relative;
-    margin-top: 2rem;
     padding-top: 5rem;
     padding-bottom: 3em;
     padding-left: 15%;

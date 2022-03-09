@@ -265,6 +265,7 @@ header {
     border: 5px solid #ec5242;
     margin-top: -12px;
     padding: 9px;
+    font-size: 16px;
   }
 
   .header-desktop .menu ul {
@@ -365,7 +366,7 @@ main {
 }
 .main-info .pre-title {
   font-family: "Lato", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.9em;
   color: #ec5242;
   z-index: 120;
   margin-top: 3em;
@@ -639,7 +640,6 @@ section .separator {
     align-items: flex-start;
     gap: 1em;
     position: relative;
-    margin-top: 2rem;
     padding-top: 5rem;
     padding-bottom: 3em;
     padding-left: 15%;
@@ -841,6 +841,15 @@ footer {
 }
 footer a {
   color: #ec5242;
+}
+footer .footer-logo a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0;
+  text-decoration: none;
+  font-family: Pacifico, Helvetica, sans-serif;
+  color: #f45011;
 }
 footer .footer-image {
   display: flex;
