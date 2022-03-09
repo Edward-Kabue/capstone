@@ -1,5 +1,4 @@
 @import "base";
-
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 .header-mobile,
@@ -263,6 +262,7 @@ header {
     font-family: Pacifico, Helvetica, sans-serif;
     color: #f45011;
   }
+
   #btn {
     border: 5px solid #ec5242;
     margin-top: -12px;
@@ -289,8 +289,6 @@ header {
     &:hover {
       color: #ec5242;
       cursor: pointer;
-      #btn {
-      }
     }
   }
 
