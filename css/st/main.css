@@ -703,9 +703,8 @@ section .separator {
     color: #272a31;
     font-weight: 900;
     line-height: 50px;
-    width: 90%;
     transform: scale(1.4);
-    margin-left: 18%;
+    
   }
   .main-info .venue {
     font-family: "Lato", sans-serif;
