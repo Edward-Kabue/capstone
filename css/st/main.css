@@ -3,8 +3,7 @@
 @import url("https://fonts.cdnfonts.com/css/cocogoose");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
-.header-mobile,
-.header-desktop {
+.header-mobile {
   width: 100%;
   padding: 25px;
   padding-left: 40px;
@@ -211,7 +210,6 @@ header {
     gap: 0;
     box-shadow: 0 2px 2px 2px gray;
     padding-bottom: 5px;
-    width: 100vw;
   }
 
   .header-desktop .topbar {
@@ -241,6 +239,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
+    padding-top: 20px;
   }
 
   .header-desktop .menu .logo {
@@ -341,7 +340,6 @@ header {
 
 body {
   background: #f8f8f8;
-  width: 100vw;
   margin: 0;
   overflow-x: hidden;
   overflow-y: unset;
@@ -406,7 +404,6 @@ main {
   line-height: 50px;
   width: 90%;
   transform: scale(1.4);
-  margin-left: 20%;
 }
 .main-info .venue {
   font-family: "Lato", sans-serif;
