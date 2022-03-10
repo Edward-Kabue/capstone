@@ -37,7 +37,7 @@ section .separator {
   padding-inline: 5%;
 
   .pre-title {
-    @include font-size-color($font-3, 1.7em, $primary-2);
+    @include font-size-color($font-3, 1.9em, $primary-2);
 
     margin-top: 1em;
     font-weight: 300;
@@ -200,11 +200,12 @@ section .separator {
   @include flex-column(center, 1em);
 
   background: rgb(83, 71, 71);
-  background: linear-gradient(
-    90deg,
-    rgba(83, 71, 71, 1) 0%,
-    rgb(122, 114, 106) 78%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(83, 71, 71, 1) 0%,
+      rgb(122, 114, 106) 78%
+    );
   color: #fcfcfc;
   padding-inline: 1em;
   padding-bottom: 1em;
@@ -408,11 +409,12 @@ section .separator {
     @include flex-column(center, 1em);
 
     background: rgb(83, 71, 71);
-    background: linear-gradient(
-      90deg,
-      rgba(83, 71, 71, 1) 0%,
-      rgb(122, 114, 106) 78%
-    );
+    background:
+      linear-gradient(
+        90deg,
+        rgba(83, 71, 71, 1) 0%,
+        rgb(122, 114, 106) 78%
+      );
     color: #fcfcfc;
     padding-inline: 2em;
     padding-bottom: 1em;

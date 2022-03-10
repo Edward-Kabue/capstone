@@ -1,18 +1,9 @@
-/* stylelint-disable no-descending-specificity */
+/* stylelint-disable  */
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.cdnfonts.com/css/cocogoose");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.cdnfonts.com/css/cocogoose");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-@import url("https://fonts.cdnfonts.com/css/cocogoose");
-.unscrollable {
-  height: 100%;
-  overflow: hidden;
-}
 
-.header-mobile,
-.header-desktop {
+.header-mobile {
   width: 100%;
   padding: 25px;
   padding-left: 40px;
@@ -219,7 +210,6 @@ header {
     gap: 0;
     box-shadow: 0 2px 2px 2px gray;
     padding-bottom: 5px;
-    width: 100vw;
   }
 
   .header-desktop .topbar {
@@ -249,6 +239,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
+    padding-top: 20px;
   }
 
   .header-desktop .menu .logo {
@@ -265,6 +256,7 @@ header {
     border: 5px solid #ec5242;
     margin-top: -12px;
     padding: 9px;
+    font-size: 16px;
   }
 
   .header-desktop .menu ul {
@@ -287,6 +279,7 @@ header {
     color: #ec5242;
     cursor: pointer;
   }
+
   .header-desktop .menu ul .link a.active {
     color: #ec5242;
   }
@@ -319,7 +312,9 @@ header {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
   }
   40% {
@@ -327,7 +322,9 @@ header {
   }
 }
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
@@ -343,10 +340,11 @@ header {
 
 body {
   background: #f8f8f8;
-  width: 100vw;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: unset;
+  padding:0;
+  overflow-x:hidden;
+ 
+  
 }
 
 main {
@@ -359,23 +357,28 @@ main {
   align-items: flex-start;
   gap: 1em;
   position: relative;
-  padding-top: 5rem;
+  background-image: url("../assets/png/bg.png");
   padding-bottom: 3em;
   padding-left: 5%;
 }
 .main-info .pre-title {
   font-family: "Lato", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.6em;
   color: #ec5242;
   z-index: 120;
-  margin-top: 3em;
   font-weight: 300;
 }
 .main-info .title {
   font-family: "CocogooseLetterPress", sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   color: #ec5242;
-  z-index: 120;
+  background-image: url(/css/assets/jpg/title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  width: 70%;
   margin-top: -1em;
 }
 .main-info .title .year {
@@ -387,11 +390,11 @@ main {
   font-family: "Lato", sans-serif;
   font-size: 16px;
   color: #222;
+  margin-top: -12px;
   border: 4px solid #fff;
   padding: 10px 15px;
   background-color: #f7f7f7;
   max-width: 90%;
-  margin: 4% 2% 0 3%;
   opacity: 0.9;
   z-index: 80;
 }
@@ -401,9 +404,8 @@ main {
   color: #272a31;
   font-weight: 900;
   line-height: 50px;
-  width: 90%;
   transform: scale(1.4);
-  margin-left: 20%;
+  padding-left:-12px;
 }
 .main-info .venue {
   font-family: "Lato", sans-serif;
@@ -475,7 +477,19 @@ section .separator {
   text-align: left;
 }
 .main-program .see-program {
-  display: none;
+  display: block;
+  margin-block: 1.5em;
+  z-index: 10000;
+}
+.main-program .see-program a {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #f8f8f8;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main-program .see-program a:hover {
+  color: #ec5242;
 }
 .main-program .enroll-btn {
   display: block;
@@ -483,11 +497,9 @@ section .separator {
   padding: 20px;
   width: 60%;
   text-align: center;
-  background: #e74c33;
   color: #fff;
   font-size: 1.2em;
   margin-block: 1.3em 0.8em;
-  border: 1px solid #272a31;
   font-weight: 400;
   z-index: 1200;
 }
@@ -524,6 +536,12 @@ section .separator {
   flex-direction: row;
   justify-content: flex-end;
   gap: 0;
+  background-image: url(/css/assets/jpg/checkerboard-squares-black-white.jpg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 135px;
+  height: 135px;
+  position: relative;
   padding-left: 5%;
 }
 .instructors .instructor img {
@@ -639,7 +657,6 @@ section .separator {
     align-items: flex-start;
     gap: 1em;
     position: relative;
-    margin-top: 2rem;
     padding-top: 5rem;
     padding-bottom: 3em;
     padding-left: 15%;
@@ -650,14 +667,19 @@ section .separator {
     color: #ec5242;
     margin-top: 0;
     font-weight: 300;
+    padding-bottom: 20px;
   }
   .main-info .title {
-    font-size: 50px;
-    background: -webkit-linear-gradient(#ec5242, #df4321);
+    font-family: "CocogooseLetterPress", sans-serif;
+    font-size: 72px;
+    color: #ec5242;
+    background-image: url(/css/assets/jpg/title.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 12000;
-    width: 70%;
+    color: transparent;
+    width: 80%;
   }
   .main-info .title .year {
     font-family: "Cocogoose", sans-serif;
@@ -672,8 +694,9 @@ section .separator {
     padding: 10px 15px;
     background-color: #f7f7f7;
     max-width: 70%;
-    margin: 20px 2% 0 0;
+    margin: 0 2% 0 0;
     opacity: 0.9;
+    margin-top: -4rem;
     z-index: 20000;
   }
   .main-info .dates {
@@ -682,9 +705,9 @@ section .separator {
     color: #272a31;
     font-weight: 900;
     line-height: 50px;
-    width: 90%;
+    padding-left:5%;
     transform: scale(1.4);
-    margin-left: 18%;
+    
   }
   .main-info .venue {
     font-family: "Lato", sans-serif;
@@ -708,6 +731,7 @@ section .separator {
     flex-direction: row;
     justify-content: center;
     gap: 1px;
+    width: 70%;
     margin-inline: 3em;
   }
   .main-program .program-item {
@@ -768,11 +792,21 @@ section .separator {
     gap: 0;
   }
   .instructors .instructors-container .instructor .img-container {
-    padding-left: 0;
+    background-image: url(/css/assets/jpg/checkerboard-squares-black-white.jpg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    width: 135px;
+    height: 135px;
+    position: relative;
   }
   .instructors .instructors-container .instructor .img-container img {
-    width: 270px;
-    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    bottom: 0;
+    right: 0;
   }
   .instructors .instructors-container .instructor .instructor-text {
     margin-left: 20px;
@@ -784,13 +818,25 @@ section .separator {
     margin-bottom: 10px;
     width: 25%;
   }
-  .instructors .instructors-container .instructor .instructor-text .instructor-name {
+  .instructors
+    .instructors-container
+    .instructor
+    .instructor-text
+    .instructor-name {
     font-size: 22px;
   }
-  .instructors .instructors-container .instructor .instructor-text .instructor-title {
+  .instructors
+    .instructors-container
+    .instructor
+    .instructor-text
+    .instructor-title {
     font-size: 17px;
   }
-  .instructors .instructors-container .instructor .instructor-text .instructor-description {
+  .instructors
+    .instructors-container
+    .instructor
+    .instructor-text
+    .instructor-description {
     font-size: 14px;
   }
 
@@ -839,19 +885,24 @@ footer {
   gap: 5%;
   padding-block: 3em;
 }
+footer .sep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
+  margin-top: 20px;
+}
 footer a {
   color: #ec5242;
 }
-footer .footer-image {
+footer .footer-logo a {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 0;
-  width: 45%;
-}
-footer .footer-image img {
-  width: 70%;
-  height: auto;
+  text-decoration: none;
+  font-family: Pacifico, Helvetica, sans-serif;
+  color: #f45011;
 }
 footer .footer-rest {
   display: flex;
@@ -860,36 +911,20 @@ footer .footer-rest {
   gap: 12px;
   padding-left: 10px;
 }
-footer .footer-rest .footer-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  color: #272a31;
-}
-footer .footer-rest .footer-text .heart {
-  color: red;
-}
-footer .footer-rest .footer-text p {
-  margin-block: 5px;
-  font-size: 14px;
-  color: #272a31;
-  font-weight: 400;
-}
 footer .footer-rest .footer-icons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
-  font-size: 20px;
+  padding-left: 10px;
+  font-size: 40px;
 }
 footer .footer-rest .footer-icons a {
   font-family: "CocogooseLetterPress", sans-serif;
   font-size: 25px;
   color: #272a31;
   padding: 10px;
+  font-size: 40px;
 }
 footer .footer-rest .footer-email {
   margin-top: -30px;
@@ -985,8 +1020,8 @@ footer.dark .footer-icons a {
     filter: invert(0.85);
   }
   footer.dark .footer-text p,
-footer.dark .footer-email a,
-footer.dark .footer-icons a {
+  footer.dark .footer-email a,
+  footer.dark .footer-icons a {
     color: #ccc;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

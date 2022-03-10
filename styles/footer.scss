@@ -1,10 +1,20 @@
 @import "base";
+
 footer {
   @include flex-row(center, 5%);
+
   padding-block: 3em;
 
   a {
     color: $primary-2;
+  }
+
+  .footer-logo a {
+    @include flex-row(flex-end, 0);
+
+    text-decoration: none;
+    font-family: Pacifico, Helvetica, sans-serif;
+    color: #f45011;
   }
 
   .footer-image {
@@ -87,6 +97,7 @@ footer {
 
     .footer-logo a {
       @include flex-row(flex-end, 0);
+
       text-decoration: none;
       font-family: Pacifico, Helvetica, sans-serif;
       color: #f45011;

@@ -1,4 +1,11 @@
-/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
+function disableScroll() {
+  document.body.classList.add('unscrollable');
+}
+function enableScroll() {
+  document.body.classList.remove('unscrollable');
+}
 
 const menuBtn = document.querySelector('.hamburger-icon');
 const mobileMenu = document.querySelector('.mobile-menu');

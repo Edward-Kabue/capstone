@@ -17,13 +17,15 @@ main {
 
 .main-info {
   @include flex-column(flex-start, 1em);
+
   position: relative;
   padding-top: 5rem;
   padding-bottom: 3em;
   padding-left: 5%;
 
   .pre-title {
-    @include font-size-color($font-3, 1.2em, $primary-2);
+    @include font-size-color($font-3, 1.9em, $primary-2);
+
     z-index: 120;
     margin-top: 3em;
     font-weight: 300;
@@ -31,7 +33,9 @@ main {
 
   .title {
     @include font-size-color($font-2, 2em, $primary-2);
+
     z-index: 120;
+
     .year {
       @include font-size-color($font-1, 1em, $primary-2);
     }
@@ -237,11 +241,12 @@ section .separator {
   @include flex-column(center, 1em);
 
   background: rgb(83, 71, 71);
-  background: linear-gradient(
-    90deg,
-    rgba(83, 71, 71, 1) 0%,
-    rgb(122, 114, 106) 78%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(83, 71, 71, 1) 0%,
+      rgb(122, 114, 106) 78%
+    );
   color: #fcfcfc;
   padding-inline: 1em;
   padding-bottom: 1em;
@@ -289,8 +294,8 @@ section .separator {
 
   .main-info {
     @include flex-column(flex-start, 1em);
+
     position: relative;
-    margin-top: 2rem;
     padding-top: 5rem;
     padding-bottom: 3em;
     padding-left: 15%;
@@ -309,6 +314,7 @@ section .separator {
       -webkit-text-fill-color: transparent;
       z-index: 12000;
       width: 70%;
+
       .year {
         @include font-size-color($font-1, 1em, $primary-2);
       }
@@ -457,11 +463,12 @@ section .separator {
     @include flex-column(center, 1em);
 
     background: rgb(83, 71, 71);
-    background: linear-gradient(
-      90deg,
-      rgba(83, 71, 71, 1) 0%,
-      rgb(122, 114, 106) 78%
-    );
+    background:
+      linear-gradient(
+        90deg,
+        rgba(83, 71, 71, 1) 0%,
+        rgb(122, 114, 106) 78%
+      );
     color: #fcfcfc;
     padding-inline: 2em;
     padding-bottom: 1em;
