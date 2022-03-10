@@ -2,7 +2,7 @@
 
 # Microverse capstone
 
-The goal was to be able to parse a behance design to create a beautiful UI using Flexbox, Grid CSS, images and backgrounds, while sticking to the best practices.using this [design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) . You can view the live site [here](https://capstone-xi.vercel.app/).
+The goal was  to parse a behance design to create a beautiful UI using Flexbox, Grid CSS, images and backgrounds, while sticking to the best practices.using this [design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) . You can view the live site [here](https://capstone-xi.vercel.app/).
 
 ![the design](/css/assets/product.png)
 
