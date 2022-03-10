@@ -703,7 +703,7 @@ section .separator {
     color: #272a31;
     font-weight: 900;
     line-height: 50px;
-    padding-left:12px;
+    padding-left:5%;
     transform: scale(1.4);
     
   }
