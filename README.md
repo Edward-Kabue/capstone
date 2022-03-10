@@ -7,6 +7,8 @@ The goal was  to parse a behance design to create a beautiful UI using Flexbox, 
 ![the design](/css/assets/product.png)
 
 
+[Loom video](https://www.loom.com/share/40cb28115a3b4a1fbdf92636979b1da4)
+
 ## Built With
 
 - html
